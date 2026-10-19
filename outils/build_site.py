@@ -16,6 +16,8 @@ PAGES = [
      "Tonte, taille des haies, débroussaillage et désherbage manuel par Abélia, paysagistes à L'Étang-la-Ville (78). Travaux éligibles au service à la personne.", None),
     ("elagage.html", "elagage", "Élagage et abattage d'arbres près de Saint-Germain-en-Laye | Abélia",
      "Élagueurs-grimpeurs à L'Étang-la-Ville (78) : élagage, abattage par démontage et dessouchage par rognage, pour particuliers, parcs et châteaux.", None),
+    ("realisations.html", "realisations", "Réalisations d'aménagement, d'entretien et d'élagage | Abélia",
+     "Galerie photo par métier d'Abélia, paysagistes à L'Étang-la-Ville (78) : aménagement de jardin, entretien, élagage et dessouchage.", "js/realisations.js"),
     ("a-propos.html", "a-propos", "À propos d'Abélia, paysagistes à L'Étang-la-Ville",
      "Entreprise de paysage fondée en 1997 à L'Étang-la-Ville (78) : équipe, zone d'intervention en Île-de-France et horaires.", None),
     ("contact.html", "contact", "Contact et devis | Abélia, paysagistes à L'Étang-la-Ville",
@@ -26,7 +28,7 @@ PAGES = [
 
 NAV = [("index", "index.html", "Accueil"), ("amenagement", "amenagement.html", "Aménagement"),
        ("entretien", "entretien.html", "Entretien"), ("elagage", "elagage.html", "Élagage"),
-       ("a-propos", "a-propos.html", "À propos"), ("contact", "contact.html", "Contact")]
+       ("realisations", "realisations.html", "Réalisations"), ("a-propos", "a-propos.html", "À propos"), ("contact", "contact.html", "Contact")]
 
 PHONE_SVG = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z"/></svg>'
 
@@ -56,7 +58,7 @@ def footer(key, page):
         cls = ' class="opt"' if opt else ""
         return f'<li{cls}><a href="{href}"{cur}>{label}</a></li>'
     links = "\n        ".join([a("amenagement.html", "Aménagement"), a("entretien.html", "Entretien"), a("elagage.html", "Élagage"),
-                              a("a-propos.html", "À propos"), a("mentions-legales.html", "Mentions légales", False)])
+                              a("realisations.html", "Réalisations"), a("a-propos.html", "À propos"), a("mentions-legales.html", "Mentions légales", False)])
     return f'''<footer class="ft">
   <div class="wrap ft__in">
     <p><strong>SAS Abélia</strong> · AAJ Abélia Aménagements de Jardins<br>20 Chemin des Brosses, 78620 L'Étang-la-Ville · <a href="tel:+33139586558">01 39 58 65 58</a> · <a href="mailto:bruno@abelia78.fr">bruno@abelia78.fr</a></p>

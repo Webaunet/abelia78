@@ -57,3 +57,17 @@ logo = Image.open(os.path.join(OUT, "logo-abelia.png"))
 tree = logo.crop((0, 0, 118, 127)).crop((0, 0, 118, 118)).resize((64, 64), Image.LANCZOS)
 tree.save(os.path.join(OUT, "favicon.png"), optimize=True)
 print("favicon.png ok")
+
+# Vignettes de la galerie (560 px de large) dans images/vignettes/
+GALERIE = ["amenagement-creation-espace-vert", "plantation-massif", "terrassement-jardin", "nivellement-terrain",
+           "jardin-maison-pierre", "entretien-tonte", "equipe-entretien-general", "taille-haies-laurier",
+           "saisons-taille-haies", "desherbage-massif", "ramassage-feuilles", "nettoyage-jardin",
+           "evacuation-dechets-verts", "elagage-chene", "elagage-chene-maison-briques", "dessouchage-rognage"]
+VIG = os.path.join(OUT, "vignettes")
+os.makedirs(VIG, exist_ok=True)
+for n in GALERIE:
+    im = Image.open(os.path.join(OUT, n + ".webp")).convert("RGB")
+    w, h = im.size
+    im = im.resize((560, round(h * 560 / w)), Image.LANCZOS)
+    im.save(os.path.join(VIG, n + ".webp"), "WEBP", quality=72, method=6)
+    print("vignette", n, im.size, os.path.getsize(os.path.join(VIG, n + ".webp")) // 1024, "Ko")
