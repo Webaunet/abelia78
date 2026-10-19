@@ -1,0 +1,156 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Contact et devis | Abélia, paysagistes à L'Étang-la-Ville</title>
+<meta name="description" content="Contactez Abélia, paysagistes et élagueurs à L'Étang-la-Ville (78) : téléphone, e-mail, adresse et formulaire de demande de devis.">
+<link rel="icon" href="images/favicon.png" type="image/png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@500&family=Outfit:wght@300;400;500;600&display=swap">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body id="top">
+<a class="skip" href="#main">Aller au contenu</a>
+
+<header class="hd">
+  <div class="wrap hd__in">
+    <a class="logo" href="https://webaunet.github.io/abelia78/" aria-label="Abélia, retour à l'accueil du site"><img src="images/logo-abelia.png" width="402" height="127" alt="Abélia, paysagistes élagueurs, service à la personne"></a>
+    <nav class="nav" id="menu" aria-label="Navigation principale">
+      <ul>
+        <li><a href="index.html">Accueil</a></li>
+        <li><a href="amenagement.html">Aménagement</a></li>
+        <li><a href="entretien.html">Entretien</a></li>
+        <li><a href="elagage.html">Élagage</a></li>
+        <li><a href="a-propos.html">À propos</a></li>
+        <li><a href="contact.html" aria-current="page">Contact</a></li>
+      </ul>
+    </nav>
+    <a class="btn btn--tel" href="tel:+33139586558" aria-label="Appeler le 01 39 58 65 58"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z"/></svg><span>01 39 58 65 58</span></a>
+    <button class="burger" type="button" aria-expanded="false" aria-controls="menu" aria-label="Ouvrir le menu"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<main id="main">
+<section class="ph ph--tile" aria-labelledby="h-page">
+  <div class="wrap">
+    <div class="ph__grid">
+      <div>
+        <h1 id="h-page">Contact et demande de devis</h1>
+        <p class="lead">Décrivez votre projet : aménagement, entretien, élagage ou abattage. L'accueil téléphonique est ouvert du lundi au vendredi, de 8 h à 12 h.</p>
+        <div class="ph__cta">
+          <a class="btn btn--tile" href="tel:+33139586558">01 39 58 65 58</a>
+          <a class="btn btn--ghost" href="#formulaire">Remplir le formulaire</a>
+        </div>
+      </div>
+      <div class="mosaic mosaic--single">
+        <figure><img src="images/contact-plantation.webp" width="1400" height="764" alt="Jardinier plantant un arbuste dans un massif, une truelle à la main"></figure>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec band bg-limestone" id="formulaire" aria-labelledby="h-form">
+  <div class="wrap">
+    <div class="cform">
+      <div class="panel-w">
+        <h2 id="h-form">Votre demande</h2>
+        <p>Ce site ne peut pas envoyer d'e-mail seul. Remplissez le formulaire : un message prêt à envoyer s'affiche, que vous pouvez envoyer par SMS ou par e-mail, copier ou accompagner d'un appel.</p>
+        <form id="contact-form" class="form" novalidate>
+          <div class="field">
+            <label for="f-nom">Nom</label>
+            <input id="f-nom" name="nom" type="text" autocomplete="name" required aria-describedby="e-nom">
+            <p class="err" id="e-nom" aria-live="polite"></p>
+          </div>
+          <div class="field">
+            <label for="f-tel">Téléphone</label>
+            <input id="f-tel" name="tel" type="tel" autocomplete="tel" inputmode="tel" placeholder="01 23 45 67 89" required aria-describedby="e-tel">
+            <p class="err" id="e-tel" aria-live="polite"></p>
+          </div>
+          <div class="field">
+            <label for="f-mail">E-mail</label>
+            <input id="f-mail" name="mail" type="email" autocomplete="email" inputmode="email" required aria-describedby="e-mail">
+            <p class="err" id="e-mail" aria-live="polite"></p>
+          </div>
+          <div class="field">
+            <label for="f-commune">Commune du chantier <span class="opt">(facultatif)</span></label>
+            <input id="f-commune" name="commune" type="text" autocomplete="address-level2">
+          </div>
+          <div class="field field--full">
+            <label for="f-presta">Prestation souhaitée</label>
+            <select id="f-presta" name="presta" required aria-describedby="e-presta">
+              <option value="">Choisir une prestation</option>
+              <option>Conception et aménagement de jardin</option>
+              <option>Entretien de jardin</option>
+              <option>Élagage et abattage</option>
+              <option>Autre demande</option>
+            </select>
+            <p class="err" id="e-presta" aria-live="polite"></p>
+          </div>
+          <div class="field field--full">
+            <label for="f-msg">Message <span class="opt">(facultatif)</span></label>
+            <textarea id="f-msg" name="msg" placeholder="Décrivez votre terrain, vos arbres ou vos besoins d'entretien."></textarea>
+          </div>
+          <div class="form__actions">
+            <button class="btn btn--tile" type="submit">Préparer mon message</button>
+            <p class="form__note status" id="form-status" role="status"></p>
+          </div>
+        </form>
+      </div>
+      <aside class="recap" aria-labelledby="h-recap">
+        <h2 id="h-recap">Votre message</h2>
+        <div class="recap__msg" id="recap-msg" aria-live="polite">Votre demande apparaîtra ici dès que le formulaire est complet.</div>
+        <div class="recap__acts">
+          <a class="btn btn--tile" id="act-sms" href="#formulaire" aria-disabled="true" tabindex="-1">Envoyer par SMS</a>
+          <button class="btn btn--ghost" id="act-copy" type="button" disabled>Copier le message</button>
+          <a class="btn btn--ghost" id="act-tel" href="tel:+33139586558">Appeler le 01 39 58 65 58</a>
+          <a class="btn btn--ghost" id="act-mail" href="#formulaire" aria-disabled="true" tabindex="-1">Envoyer par e-mail</a>
+        </div>
+        <p class="recap__help" id="recap-help">Les boutons SMS, copie et e-mail s'activent quand le formulaire est valide.</p>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<section class="sec sec--last band bg-forest" aria-labelledby="h-coords">
+  <div class="wrap">
+    <div class="split">
+      <div class="on-dark">
+        <h2 id="h-coords">Nous trouver</h2>
+        <p class="lead">Abélia est installée à L'Étang-la-Ville, près de Saint-Germain-en-Laye, et intervient dans le secteur et plus largement en Île-de-France.</p>
+        <dl class="hours" style="margin-top:20px">
+          <dt style="color:rgba(255,255,255,.8)">Accueil téléphonique, du lundi au vendredi</dt><dd>8 h – 12 h</dd>
+          <dt style="color:rgba(255,255,255,.8)">Interventions, du lundi au vendredi</dt><dd>8 h – 12 h et 13 h – 17 h</dd>
+        </dl>
+      </div>
+      <dl class="coords">
+        <div><dt>Téléphone</dt><dd id="c-tel">01 39 58 65 58</dd><button class="copy" type="button" data-copy="c-tel" aria-label="Copier le numéro de téléphone">Copier</button></div>
+        <div><dt>E-mail</dt><dd id="c-mail">bruno@abelia78.fr</dd><button class="copy" type="button" data-copy="c-mail" aria-label="Copier l'adresse e-mail">Copier</button></div>
+        <div><dt>Adresse</dt><dd>20 Chemin des Brosses, 78620 L'Étang-la-Ville</dd></div>
+      </dl>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="ft">
+  <div class="wrap ft__in">
+    <p><strong>SAS Abélia</strong> · AAJ Abélia Aménagements de Jardins<br>20 Chemin des Brosses, 78620 L'Étang-la-Ville · <a href="tel:+33139586558">01 39 58 65 58</a> · <a href="mailto:bruno@abelia78.fr">bruno@abelia78.fr</a></p>
+    <nav aria-label="Pied de page">
+      <ul>
+        <li class="opt"><a href="amenagement.html">Aménagement</a></li>
+        <li class="opt"><a href="entretien.html">Entretien</a></li>
+        <li class="opt"><a href="elagage.html">Élagage</a></li>
+        <li class="opt"><a href="a-propos.html">À propos</a></li>
+        <li><a href="mentions-legales.html">Mentions légales</a></li>
+      </ul>
+    </nav>
+  </div>
+</footer>
+
+<div class="toast" role="status" aria-live="polite"></div>
+<script src="js/site.js"></script>
+<script src="js/contact.js"></script>
+</body>
+</html>
